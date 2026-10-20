@@ -1,0 +1,699 @@
+/* ==========================================================================
+   Hand-Drawn CSS: Vintage Scrapbook Aesthetics (isi-lemarigue)
+   Specifications: Design.md & PRD.md
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Washi Tape & Notebook Accents
+   -------------------------------------------------------------------------- */
+.washi-tape {
+    position: relative;
+}
+
+.washi-tape::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-1.5deg);
+    width: 80px;
+    height: 22px;
+    background-color: var(--color-washi);
+    border-left: 2px dashed rgba(36, 36, 36, 0.25);
+    border-right: 2px dashed rgba(36, 36, 36, 0.25);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.washi-tape-angle-left::before {
+    transform: translateX(-50%) rotate(-4deg);
+}
+
+.washi-tape-angle-right::before {
+    transform: translateX(-50%) rotate(3.5deg);
+}
+
+.washi-tape-yellow {
+    background-color: rgba(243, 211, 97, 0.75);
+}
+
+.washi-tape-sage {
+    background-color: rgba(91, 138, 114, 0.55);
+}
+
+/* Notebook Header with Dotted Seam */
+.notebook-header {
+    background-color: var(--color-paper-light);
+    border-bottom: var(--border-ink);
+    box-shadow: 0 3px 0px rgba(36, 36, 36, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 40;
+}
+
+.notebook-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.logo-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-sans);
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: var(--color-ink);
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.logo-brand:hover {
+    color: var(--color-terracotta);
+}
+
+.logo-pin {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--color-highlighter);
+    border: var(--border-ink-thin);
+    box-shadow: 1px 1px 0 var(--color-ink);
+}
+
+/* --------------------------------------------------------------------------
+   2. Sketch Buttons & Interactive Elements
+   -------------------------------------------------------------------------- */
+.btn-sketch {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1.25rem;
+    background-color: var(--color-paper-light);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    border: var(--border-ink);
+    border-radius: var(--radius-wobbly);
+    box-shadow: var(--shadow-sketch);
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease;
+    user-select: none;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-sketch:hover {
+    background-color: var(--color-highlighter);
+    transform: translate(-1px, -1px);
+    box-shadow: var(--shadow-sketch-lg);
+}
+
+.btn-sketch:active {
+    transform: translate(3px, 4px);
+    box-shadow: 1px 1px 0px var(--color-ink);
+}
+
+.btn-sketch-primary {
+    background-color: var(--color-highlighter);
+}
+
+.btn-sketch-primary:hover {
+    background-color: var(--color-highlighter-hover);
+}
+
+.btn-sketch-terracotta {
+    background-color: var(--color-terracotta);
+    color: #FFFFFF;
+}
+
+.btn-sketch-terracotta:hover {
+    background-color: #B54D3D;
+    color: #FFFFFF;
+}
+
+.btn-sketch-sage {
+    background-color: var(--color-sage);
+    color: #FFFFFF;
+}
+
+.btn-sketch-sage:hover {
+    background-color: #4C7460;
+    color: #FFFFFF;
+}
+
+.btn-sketch-sm {
+    padding: 0.35rem 0.85rem;
+    font-size: 1.05rem;
+    min-height: 38px;
+    box-shadow: var(--shadow-sketch-sm);
+}
+
+.btn-sketch:disabled,
+.btn-sketch[disabled] {
+    opacity: 0.55;
+    cursor: not-allowed;
+    background-color: #E2DFD8;
+    transform: none !important;
+    box-shadow: var(--shadow-sketch-sm) !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. Polaroid Product Card
+   -------------------------------------------------------------------------- */
+.polaroid-card {
+    background-color: var(--color-paper-light);
+    border: var(--border-ink);
+    border-radius: 4px;
+    padding: 0.75rem 0.75rem 1.25rem 0.75rem;
+    box-shadow: var(--shadow-sketch);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--color-ink);
+}
+
+/* Subtle organic alternating rotation */
+.polaroid-grid > .polaroid-card:nth-child(even) {
+    transform: rotate(0.7deg);
+}
+
+.polaroid-grid > .polaroid-card:nth-child(odd) {
+    transform: rotate(-0.8deg);
+}
+
+.polaroid-grid > .polaroid-card:nth-child(3n) {
+    transform: rotate(0.4deg);
+}
+
+.polaroid-card:hover {
+    transform: rotate(0deg) scale(1.02);
+    box-shadow: var(--shadow-sketch-lg);
+    z-index: 5;
+}
+
+.polaroid-photo-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #F0ECE1;
+    border: 1.5px solid var(--color-ink);
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+}
+
+.polaroid-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.polaroid-card:hover .polaroid-photo {
+    transform: scale(1.04);
+}
+
+.polaroid-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    flex-grow: 1;
+}
+
+.polaroid-title {
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.015em;
+    margin-bottom: 0.2rem;
+    color: var(--color-ink);
+}
+
+.polaroid-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--color-ink-muted);
+    font-weight: 500;
+}
+
+.polaroid-price-wrap {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.polaroid-price {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--color-ink);
+}
+
+.polaroid-price-strike {
+    font-family: var(--font-hand);
+    font-size: 1.05rem;
+    color: var(--color-terracotta);
+    text-decoration: line-through;
+    opacity: 0.85;
+}
+
+/* --------------------------------------------------------------------------
+   4. Stamp Badges (Grade & Status)
+   -------------------------------------------------------------------------- */
+.stamp-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.65rem;
+    font-family: var(--font-hand);
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 6px;
+    border: 2px dashed currentColor;
+    line-height: 1;
+    transform: rotate(-3deg);
+    user-select: none;
+}
+
+.stamp-badge-available {
+    color: var(--color-sage);
+    background-color: var(--color-sage-bg);
+    border-style: solid;
+}
+
+.stamp-badge-booked {
+    color: #9A6B0A;
+    background-color: #FEF7DE;
+    border-style: dashed;
+    transform: rotate(3deg);
+}
+
+.stamp-badge-sold {
+    color: var(--color-terracotta);
+    background-color: var(--color-terracotta-bg);
+    border-style: double;
+    border-width: 3px;
+    transform: rotate(-6deg);
+}
+
+.stamp-badge-likenew {
+    color: var(--color-sage);
+    background-color: var(--color-sage-bg);
+}
+
+.stamp-badge-good {
+    color: #3B6482;
+    background-color: #E8F0F6;
+}
+
+.stamp-badge-fair {
+    color: #8D5B3A;
+    background-color: #F6EFEA;
+}
+
+/* Floating overlay stamp on photo */
+.photo-stamp {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    z-index: 3;
+    box-shadow: 1px 2px 0 var(--color-ink);
+}
+
+/* --------------------------------------------------------------------------
+   5. Receipt-Style Checkout Container & Modals
+   -------------------------------------------------------------------------- */
+.receipt-box {
+    background-color: #FFFFFF;
+    border: var(--border-ink);
+    border-bottom: none;
+    box-shadow: var(--shadow-sketch);
+    padding: 1.75rem 1.5rem 2.5rem 1.5rem;
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Zigzag serrated edge at bottom of receipt */
+.receipt-box::after {
+    content: '';
+    position: absolute;
+    bottom: -16px;
+    left: -2px;
+    right: -2px;
+    height: 16px;
+    background: 
+        linear-gradient(-45deg, transparent 10px, #FFFFFF 10px) 0 0,
+        linear-gradient(45deg, transparent 10px, #FFFFFF 10px) 0 0;
+    background-repeat: repeat-x;
+    background-size: 16px 16px;
+    filter: drop-shadow(0 2px 0 var(--color-ink));
+}
+
+.receipt-header {
+    text-align: center;
+    border-bottom: 2px dashed var(--color-ink);
+    padding-bottom: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.receipt-header h2 {
+    font-family: var(--font-sans);
+    font-size: 1.65rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.25rem;
+}
+
+.receipt-divider {
+    border: none;
+    border-top: 2px dashed var(--color-ink);
+    margin: 1.25rem 0;
+}
+
+.receipt-item-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.45rem 0;
+    font-size: 0.95rem;
+}
+
+.receipt-total-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.25rem;
+    font-weight: 700;
+    padding-top: 0.75rem;
+    border-top: 2px solid var(--color-ink);
+}
+
+/* --------------------------------------------------------------------------
+   6. Form Controls: Hand-Drawn Inputs
+   -------------------------------------------------------------------------- */
+.form-group {
+    margin-bottom: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.form-label {
+    font-weight: 600;
+    font-size: 0.925rem;
+    color: var(--color-ink);
+}
+
+.input-sketch {
+    width: 100%;
+    padding: 0.65rem 0.85rem;
+    background-color: var(--color-paper-light);
+    color: var(--color-ink);
+    border: var(--border-ink);
+    border-radius: var(--radius-hand);
+    box-shadow: 2px 2px 0 var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 0.975rem;
+    transition: box-shadow 0.15s ease, background-color 0.15s ease;
+}
+
+.input-sketch:focus {
+    background-color: #FFFFFF;
+    outline: none;
+    box-shadow: 3px 4px 0 var(--color-ink);
+    border-color: var(--color-ink);
+}
+
+textarea.input-sketch {
+    min-height: 90px;
+    resize: vertical;
+}
+
+/* --------------------------------------------------------------------------
+   7. Filter Bar & Badges
+   -------------------------------------------------------------------------- */
+.filter-bar {
+    background-color: var(--color-paper-light);
+    border: var(--border-ink);
+    border-radius: var(--radius-wobbly);
+    box-shadow: var(--shadow-sketch-sm);
+    padding: 1rem 1.25rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.filter-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.35rem 0.85rem;
+    background-color: transparent;
+    color: var(--color-ink);
+    border: 1.5px solid var(--color-ink);
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.15s ease, transform 0.1s ease;
+}
+
+.filter-pill:hover,
+.filter-pill.active {
+    background-color: var(--color-highlighter);
+    transform: translateY(-1px);
+    box-shadow: 1px 2px 0 var(--color-ink);
+}
+
+/* --------------------------------------------------------------------------
+   8. Floating Cart Button & Drawer
+   -------------------------------------------------------------------------- */
+.floating-cart-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 1.35rem;
+    background-color: var(--color-highlighter);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    border: var(--border-ink-thick);
+    border-radius: var(--radius-wobbly);
+    box-shadow: var(--shadow-sketch-lg);
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    user-select: none;
+}
+
+.floating-cart-btn:hover {
+    transform: translate(-2px, -2px) scale(1.03);
+    box-shadow: 8px 10px 0px var(--color-ink);
+}
+
+.floating-cart-btn:active {
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0px var(--color-ink);
+}
+
+.cart-count-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 26px;
+    height: 26px;
+    padding: 0 6px;
+    background-color: var(--color-terracotta);
+    color: #FFFFFF;
+    border: var(--border-ink-thin);
+    border-radius: 50%;
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/* Cart Drawer Modal */
+.cart-drawer-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(36, 36, 36, 0.45);
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease;
+    backdrop-filter: blur(2px);
+}
+
+.cart-drawer-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cart-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 440px;
+    height: 100%;
+    background-color: var(--color-paper-light);
+    border-left: var(--border-ink-thick);
+    box-shadow: -4px 0 15px rgba(36, 36, 36, 0.15);
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-drawer.active {
+    transform: translateX(0);
+}
+
+.cart-drawer-header {
+    padding: 1.25rem 1.5rem;
+    border-bottom: 2px dashed var(--color-ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-drawer-header h3 {
+    font-size: 1.8rem;
+}
+
+.cart-drawer-close {
+    background: none;
+    border: var(--border-ink);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 var(--color-ink);
+}
+
+.cart-drawer-body {
+    flex: 1 1 auto;
+    overflow-y: auto;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cart-drawer-footer {
+    padding: 1.25rem 1.5rem;
+    border-top: var(--border-ink);
+    background-color: #FFFFFF;
+    box-shadow: 0 -3px 8px rgba(36, 36, 36, 0.05);
+}
+
+/* --------------------------------------------------------------------------
+   9. Scrapbook Cards & Admin UI
+   -------------------------------------------------------------------------- */
+.scrapbook-card {
+    background-color: var(--color-paper-light);
+    border: var(--border-ink);
+    border-radius: var(--radius-hand);
+    box-shadow: var(--shadow-sketch);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 1rem;
+    border: var(--border-ink);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+}
+
+.admin-table th {
+    background-color: var(--color-paper);
+    padding: 0.75rem 1rem;
+    text-align: left;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border-bottom: var(--border-ink);
+    color: var(--color-ink);
+}
+
+.admin-table td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px dashed #DDD8CE;
+    font-size: 0.925rem;
+}
+
+.admin-table tr:last-child td {
+    border-bottom: none;
+}
+
+.admin-table tr:hover td {
+    background-color: #FAF7F0;
+}
+
+/* --------------------------------------------------------------------------
+   10. Alerts & Flash Messages
+   -------------------------------------------------------------------------- */
+.alert-sketch {
+    padding: 0.85rem 1.25rem;
+    border: var(--border-ink);
+    border-radius: var(--radius-hand);
+    box-shadow: var(--shadow-sketch-sm);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.alert-sketch-success {
+    background-color: var(--color-sage-bg);
+    color: #2D5842;
+    border-color: var(--color-sage);
+}
+
+.alert-sketch-error {
+    background-color: var(--color-terracotta-bg);
+    color: #8C3022;
+    border-color: var(--color-terracotta);
+}

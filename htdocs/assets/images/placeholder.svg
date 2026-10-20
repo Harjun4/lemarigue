@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#FAF6EE"/>
+  <!-- Sketch frame -->
+  <rect x="20" y="20" width="360" height="360" rx="15" fill="#FFFDF9" stroke="#242424" stroke-width="3" stroke-dasharray="6,4"/>
+  <!-- Hanger Doodle -->
+  <path d="M200,100 C190,80 200,60 210,65 C220,70 215,85 200,105 L120,180 L280,180 Z" fill="none" stroke="#242424" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="120" y1="180" x2="280" y2="180" stroke="#242424" stroke-width="4" stroke-linecap="round"/>
+  <!-- Garment silhouette sketch -->
+  <path d="M140,185 L120,240 L160,250 L160,320 L240,320 L240,250 L280,240 L260,185 Z" fill="#F4EBD9" stroke="#242424" stroke-width="3" stroke-linejoin="round"/>
+  <text x="200" y="355" font-family="'Caveat', cursive, sans-serif" font-size="22" font-weight="bold" fill="#242424" text-anchor="middle">Foto Produk Preloved</text>
+</svg>

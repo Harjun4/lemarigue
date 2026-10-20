@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#FAF6EE"/>
+  <rect x="25" y="25" width="450" height="450" fill="#FFFDF9" stroke="#242424" stroke-width="3" rx="8"/>
+  <g transform="translate(75, 40)">
+    <!-- Shoulder Strap -->
+    <path d="M70,220 C60,90 290,90 280,220" fill="none" stroke="#523927" stroke-width="8" stroke-linecap="round"/>
+    <path d="M70,220 C60,90 290,90 280,220" fill="none" stroke="#242424" stroke-width="2" stroke-dasharray="6,4"/>
+    <!-- Bag Body -->
+    <path d="M60,210 L290,210 L280,340 Q280,360 260,360 L90,360 Q70,360 70,340 Z" fill="#D9C9A5" stroke="#242424" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- Bag Flap -->
+    <path d="M55,210 L295,210 L285,280 Q175,300 65,280 Z" fill="#C5B187" stroke="#242424" stroke-width="3.5"/>
+    <!-- Buckle Straps -->
+    <rect x="110" y="250" width="16" height="60" rx="3" fill="#6B4B35" stroke="#242424" stroke-width="2"/>
+    <circle cx="118" cy="290" r="4" fill="#F3D361" stroke="#242424" stroke-width="1.5"/>
+    <rect x="220" y="250" width="16" height="60" rx="3" fill="#6B4B35" stroke="#242424" stroke-width="2"/>
+    <circle cx="228" cy="290" r="4" fill="#F3D361" stroke="#242424" stroke-width="1.5"/>
+    <!-- Canvas Texture marks -->
+    <line x1="85" y1="320" x2="95" y2="330" stroke="#8C7A58" stroke-width="2"/>
+    <line x1="95" y1="320" x2="85" y2="330" stroke="#8C7A58" stroke-width="2"/>
+    <line x1="255" y1="320" x2="265" y2="330" stroke="#8C7A58" stroke-width="2"/>
+    <line x1="265" y1="320" x2="255" y2="330" stroke="#8C7A58" stroke-width="2"/>
+  </g>
+  <text x="250" y="440" font-family="'Caveat', cursive, sans-serif" font-size="24" font-weight="bold" fill="#242424" text-anchor="middle">Tas Bahu Kanvas Daily</text>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#FAF6EE"/>
+  <rect x="25" y="25" width="450" height="450" fill="#FFFDF9" stroke="#242424" stroke-width="3" rx="8"/>
+  <g transform="translate(60, 45)">
+    <!-- V-Neck Cardigan -->
+    <path d="M120,100 L75,240 L110,250 L120,330 L260,330 L270,250 L305,240 L260,100 L210,100 L190,190 L170,100 Z" fill="#EAE2CF" stroke="#242424" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- V-neck placket line -->
+    <path d="M190,190 L190,330" stroke="#242424" stroke-width="3"/>
+    <!-- Big Vintage Buttons -->
+    <circle cx="190" cy="220" r="7" fill="#6B4B35" stroke="#242424" stroke-width="2"/>
+    <circle cx="190" cy="260" r="7" fill="#6B4B35" stroke="#242424" stroke-width="2"/>
+    <circle cx="190" cy="300" r="7" fill="#6B4B35" stroke="#242424" stroke-width="2"/>
+    <!-- Knit Cable Pattern details -->
+    <path d="M145,130 Q155,150 145,170 Q155,190 145,210 Q155,230 145,250 Q155,270 145,290" stroke="#D3C7AE" stroke-width="4" fill="none"/>
+    <path d="M235,130 Q225,150 235,170 Q225,190 235,210 Q225,230 235,250 Q225,270 235,290" stroke="#D3C7AE" stroke-width="4" fill="none"/>
+    <!-- Pockets -->
+    <rect x="130" y="270" width="35" height="35" rx="3" fill="#DFD6C2" stroke="#242424" stroke-width="2"/>
+    <rect x="215" y="270" width="35" height="35" rx="3" fill="#DFD6C2" stroke="#242424" stroke-width="2"/>
+  </g>
+  <text x="250" y="440" font-family="'Caveat', cursive, sans-serif" font-size="24" font-weight="bold" fill="#242424" text-anchor="middle">Cardigan Rajut Wool Cream</text>
+</svg>

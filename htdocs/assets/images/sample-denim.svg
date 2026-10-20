@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#FAF6EE"/>
+  <!-- Paper textured frame -->
+  <rect x="25" y="25" width="450" height="450" fill="#FFFDF9" stroke="#242424" stroke-width="3" rx="8"/>
+  <!-- Vintage Denim Jacket Sketch -->
+  <g transform="translate(50, 40)">
+    <!-- Collar -->
+    <path d="M150,90 L200,120 L250,90 L220,70 L180,70 Z" fill="#4B6B82" stroke="#242424" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- Body -->
+    <path d="M120,110 L80,260 L120,270 L130,340 L270,340 L280,270 L320,260 L280,110 L250,90 L150,90 Z" fill="#5D829B" stroke="#242424" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- Center Button Line & Seams -->
+    <line x1="200" y1="120" x2="200" y2="340" stroke="#242424" stroke-width="3" stroke-dasharray="8,4"/>
+    <!-- Brass Buttons -->
+    <circle cx="200" cy="150" r="5" fill="#F3D361" stroke="#242424" stroke-width="2"/>
+    <circle cx="200" cy="200" r="5" fill="#F3D361" stroke="#242424" stroke-width="2"/>
+    <circle cx="200" cy="250" r="5" fill="#F3D361" stroke="#242424" stroke-width="2"/>
+    <circle cx="200" cy="300" r="5" fill="#F3D361" stroke="#242424" stroke-width="2"/>
+    <!-- Flap Pockets -->
+    <rect x="145" y="150" width="35" height="35" rx="3" fill="#4B6B82" stroke="#242424" stroke-width="2.5"/>
+    <rect x="220" y="150" width="35" height="35" rx="3" fill="#4B6B82" stroke="#242424" stroke-width="2.5"/>
+    <!-- Natural Denim Fade Highlights -->
+    <path d="M140,240 Q150,280 145,310" stroke="#7BA2BC" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M255,240 Q245,280 250,310" stroke="#7BA2BC" stroke-width="6" stroke-linecap="round" fill="none"/>
+  </g>
+  <text x="250" y="440" font-family="'Caveat', cursive, sans-serif" font-size="24" font-weight="bold" fill="#242424" text-anchor="middle">Denim Vintage 90s (Oversized)</text>
+</svg>

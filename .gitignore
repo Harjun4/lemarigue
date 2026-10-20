@@ -1,0 +1,18 @@
+# Database credentials & local configs
+htdocs/config/db_config.php
+.env
+.env.*
+
+# Operating System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE & Editor folders
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Logs & temp files
+*.log
+error_log

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <rect width="100%" height="100%" fill="#FAF6EE"/>
+  <rect x="25" y="25" width="450" height="450" fill="#FFFDF9" stroke="#242424" stroke-width="3" rx="8"/>
+  <g transform="translate(50, 40)">
+    <!-- Collar -->
+    <path d="M150,90 L200,120 L250,90 L220,70 L180,70 Z" fill="#8C4A3E" stroke="#242424" stroke-width="3.5"/>
+    <!-- Body with Plaid pattern -->
+    <path d="M130,110 L90,260 L125,270 L135,340 L265,340 L275,270 L310,260 L270,110 L250,90 L150,90 Z" fill="#A75D4E" stroke="#242424" stroke-width="3.5" stroke-linejoin="round"/>
+    <!-- Plaid stripes -->
+    <line x1="165" y1="100" x2="165" y2="340" stroke="#3D4A3E" stroke-width="5" opacity="0.6"/>
+    <line x1="200" y1="120" x2="200" y2="340" stroke="#3D4A3E" stroke-width="5" opacity="0.6"/>
+    <line x1="235" y1="100" x2="235" y2="340" stroke="#3D4A3E" stroke-width="5" opacity="0.6"/>
+    <line x1="100" y1="180" x2="300" y2="180" stroke="#F3D361" stroke-width="4" opacity="0.7"/>
+    <line x1="110" y1="240" x2="290" y2="240" stroke="#F3D361" stroke-width="4" opacity="0.7"/>
+    <line x1="120" y1="300" x2="280" y2="300" stroke="#F3D361" stroke-width="4" opacity="0.7"/>
+    <!-- Buttons -->
+    <circle cx="200" cy="150" r="4" fill="#FAF6EE" stroke="#242424" stroke-width="2"/>
+    <circle cx="200" cy="200" r="4" fill="#FAF6EE" stroke="#242424" stroke-width="2"/>
+    <circle cx="200" cy="250" r="4" fill="#FAF6EE" stroke="#242424" stroke-width="2"/>
+    <circle cx="200" cy="300" r="4" fill="#FAF6EE" stroke="#242424" stroke-width="2"/>
+    <!-- Left Pocket -->
+    <rect x="145" y="160" width="35" height="35" rx="3" fill="#8C4A3E" stroke="#242424" stroke-width="2"/>
+  </g>
+  <text x="250" y="440" font-family="'Caveat', cursive, sans-serif" font-size="24" font-weight="bold" fill="#242424" text-anchor="middle">Kemeja Flanel Earth Tone</text>
+</svg>
