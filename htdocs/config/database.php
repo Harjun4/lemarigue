@@ -12,10 +12,13 @@ class Database {
             return self::$instance;
         }
 
-        // Allow overriding via config file if present
+        // Allow overriding via config file if present (checks config/ or root)
         $customConfig = __DIR__ . '/db_config.php';
+        $rootConfig = dirname(__DIR__) . '/db_config.php';
         if (file_exists($customConfig)) {
             $cfg = require $customConfig;
+        } elseif (file_exists($rootConfig)) {
+            $cfg = require $rootConfig;
         } else {
             $cfg = [];
         }

@@ -38,7 +38,8 @@ if (isset($_GET['route'])) {
 // Public Storefront Routes
 // --------------------------------------------------------------------------
 
-// Home & Catalog
+try {
+    // Home & Catalog
 if ($path === '/' || $path === '') {
     $productModel = new Product();
     $filters = [
@@ -198,3 +199,37 @@ require_once ROOT_PATH . '/views/layouts/header.php';
 </div>
 <?php
 require_once ROOT_PATH . '/views/layouts/footer.php';
+} catch (Throwable $e) {
+    http_response_code(500);
+    ?>
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Setup / Database Notice</title>
+        <style>
+            body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #faf7f2; padding: 40px 20px; color: #2d3748; }
+            .box { max-width: 600px; margin: 0 auto; background: #fff; padding: 30px; border: 2px solid #2d3748; border-radius: 12px; box-shadow: 6px 6px 0 #2d3748; }
+            h2 { margin-top: 0; color: #b91c1c; font-size: 1.5rem; }
+            code { background: #edf2f7; padding: 2px 6px; border-radius: 4px; font-size: 0.9em; word-break: break-all; }
+            .msg { background: #fee2e2; border-left: 4px solid #ef4444; padding: 12px 16px; margin: 16px 0; font-family: monospace; font-size: 0.95em; color: #7f1d1d; }
+            ul { line-height: 1.6; padding-left: 20px; }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <h2>⚠️ Terjadi Kendala Sistem / Database</h2>
+            <p>Aplikasi toko tidak dapat berjalan karena alasan berikut:</p>
+            <div class="msg"><?= htmlspecialchars($e->getMessage(), ENT_QUOTES, 'UTF-8') ?></div>
+            <p><strong>Langkah Perbaikan:</strong></p>
+            <ul>
+                <li>Pastikan file <code>config/db_config.php</code> sudah diisi dengan data MySQL yang benar dari panel InfinityFree (Host, Nama DB, Username, Password).</li>
+                <li>Pastikan file <code>schema.sql</code> sudah berhasil di-import di menu phpMyAdmin.</li>
+            </ul>
+        </div>
+    </body>
+    </html>
+    <?php
+    exit;
+}

@@ -3,5 +3,3 @@
     Order Deny,Allow
     Deny from all
 </FilesMatch>
-
-Options -Indexes -ExecCGI

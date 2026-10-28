@@ -22,8 +22,5 @@
     RewriteRule ^ index.php [QSA,L]
 </IfModule>
 
-# Prevent directory browsing
-Options -Indexes
-
 # Set UTF-8 encoding
 AddDefaultCharset UTF-8
