@@ -25,6 +25,9 @@ $categories = [
 <!-- Hero Banner (Scrapbook Diary Cover) -->
 <section style="margin-bottom: 2.5rem; text-align: center; position: relative;">
     <div class="scrapbook-card washi-tape washi-tape-angle-left" style="max-width: 800px; margin: 0 auto; padding: 2.5rem 1.5rem 2rem 1.5rem; background-color: var(--color-paper-light);">
+        <div style="margin-bottom: 1.25rem;">
+            <img src="<?= asset('assets/images/logo.jpg') ?>" alt="Logo <?= e($storeName ?? 'Isi Lemarigue') ?>" style="width: 110px; height: 110px; object-fit: contain; border-radius: 14px; border: 2.5px solid var(--color-ink); box-shadow: 4px 4px 0 var(--color-ink); background: #ffffff; padding: 6px; transform: rotate(-2deg); display: inline-block;">
+        </div>
         <p style="font-family: var(--font-hand); font-size: 1.4rem; color: var(--color-ink-muted); margin-bottom: 0.25rem;">
             Buku Catatan Koleksi Preloved
         </p>

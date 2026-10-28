@@ -19,7 +19,10 @@ $shippingNote = $settingModel->get('shipping_note', 'Pengiriman dari Tangerang.'
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-bottom: 2.5rem;">
             <!-- Brand Column -->
             <div>
-                <h3 style="font-size: 1.8rem; margin-bottom: 0.5rem;"><?= e($storeName) ?></h3>
+                <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem;">
+                    <img src="<?= asset('assets/images/logo.jpg') ?>" alt="Logo <?= e($storeName) ?>" style="width: 50px; height: 50px; object-fit: contain; border-radius: 8px; border: 1.5px solid var(--color-ink); background: #ffffff; padding: 2px; box-shadow: 2px 2px 0 var(--color-ink);">
+                    <h3 style="font-size: 1.8rem; margin: 0; line-height: 1.2;"><?= e($storeName) ?></h3>
+                </div>
                 <p style="color: var(--color-ink-muted); margin-bottom: 1rem;"><?= e($storeTagline) ?></p>
                 <div style="display: inline-block; padding: 0.35rem 0.75rem; background-color: var(--color-washi); border: 1.5px dashed var(--color-ink); border-radius: 4px; font-family: var(--font-hand); font-size: 1.15rem; font-weight: bold;">
                     Stok Satuan (One-of-a-kind)

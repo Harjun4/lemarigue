@@ -10,11 +10,14 @@ require_once __DIR__ . '/../layouts/header.php';
 
 <!-- Admin Navigation Subbar -->
 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: var(--border-ink);">
-    <div>
-        <h1 style="font-size: 2.4rem; margin-bottom: 0.15rem;">Dasbor Pengelola Toko</h1>
-        <p style="color: var(--color-ink-muted); margin: 0; font-size: 0.95rem;">
-            Halo, <strong><?= e($_SESSION['admin_name'] ?? 'Pengelola') ?></strong>! Kelola katalog dan pesanan masuk dari sini.
-        </p>
+    <div style="display: flex; align-items: center; gap: 1rem;">
+        <img src="<?= asset('assets/images/logo.jpg') ?>" alt="Logo Toko" style="width: 58px; height: 58px; object-fit: contain; border-radius: 10px; border: 2px solid var(--color-ink); background: #ffffff; padding: 3px; box-shadow: 2px 2px 0 var(--color-ink);">
+        <div>
+            <h1 style="font-size: 2.2rem; margin-bottom: 0.15rem;">Dasbor Pengelola Toko</h1>
+            <p style="color: var(--color-ink-muted); margin: 0; font-size: 0.95rem;">
+                Halo, <strong><?= e($_SESSION['admin_name'] ?? 'Pengelola') ?></strong>! Kelola katalog dan pesanan masuk dari sini.
+            </p>
+        </div>
     </div>
 
     <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">

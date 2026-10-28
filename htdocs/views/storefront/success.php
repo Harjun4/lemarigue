@@ -12,7 +12,10 @@ require_once __DIR__ . '/../layouts/header.php';
     <div class="receipt-box washi-tape washi-tape-angle-right">
         <!-- Receipt Header -->
         <div class="receipt-header">
-            <span class="stamp-badge stamp-badge-booked" style="margin-bottom: 0.5rem;">STATUS: MENUNGGU PEMBAYARAN</span>
+            <div style="margin-bottom: 0.5rem;">
+                <img src="<?= asset('assets/images/logo.jpg') ?>" alt="Logo Toko" style="width: 64px; height: 64px; object-fit: contain; border-radius: 10px; border: 2px solid var(--color-ink); background: #ffffff; padding: 3px; display: inline-block;">
+            </div>
+            <span class="stamp-badge stamp-badge-booked" style="margin-bottom: 0.5rem; display: inline-block;">STATUS: MENUNGGU PEMBAYARAN</span>
             <h1 style="font-size: 2.2rem; margin-bottom: 0.25rem;">Pesanan Berhasil Dicatat!</h1>
             <p style="font-size: 1.15rem; font-weight: 700; color: var(--color-ink);">
                 Kode Order: <span style="font-family: var(--font-hand); font-size: 1.6rem; color: var(--color-terracotta);"><?= e($order['order_code']) ?></span>

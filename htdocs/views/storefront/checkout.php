@@ -20,7 +20,10 @@ if ($directId > 0) {
     <div class="receipt-box washi-tape washi-tape-angle-left">
         <!-- Receipt Header -->
         <div class="receipt-header">
-            <span class="stamp-badge stamp-badge-good" style="margin-bottom: 0.5rem;">NOTA PRA-PEMESANAN</span>
+            <div style="margin-bottom: 0.5rem;">
+                <img src="<?= asset('assets/images/logo.jpg') ?>" alt="Logo Toko" style="width: 64px; height: 64px; object-fit: contain; border-radius: 10px; border: 2px solid var(--color-ink); background: #ffffff; padding: 3px; display: inline-block;">
+            </div>
+            <span class="stamp-badge stamp-badge-good" style="margin-bottom: 0.5rem; display: inline-block;">NOTA PRA-PEMESANAN</span>
             <h2>Lembar Pesanan Preloved</h2>
             <p style="font-size: 0.875rem; color: var(--color-ink-muted); margin: 0;">
                 Stok Satuan &bull; Konfirmasi Pembayaran Langsung via WhatsApp

@@ -17,6 +17,8 @@ $storeTagline = $settingModel->get('store_tagline', 'Koleksi pakaian preloved pi
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= isset($pageTitle) ? e($pageTitle) . ' | ' : '' ?><?= e($storeName) ?></title>
     <meta name="description" content="<?= isset($pageDescription) ? e($pageDescription) : e($storeTagline) ?>">
+    <link rel="icon" type="image/jpeg" href="<?= asset('assets/images/logo.jpg') ?>">
+    <link rel="apple-touch-icon" href="<?= asset('assets/images/logo.jpg') ?>">
     
     <!-- Design System CSS -->
     <link rel="stylesheet" href="<?= asset('assets/css/main.css') ?>">
@@ -32,8 +34,8 @@ $storeTagline = $settingModel->get('store_tagline', 'Koleksi pakaian preloved pi
 <header class="notebook-header" role="banner">
     <div class="container">
         <nav class="notebook-nav" aria-label="Navigasi Utama">
-            <a href="<?= url('') ?>" class="logo-brand">
-                <span class="logo-pin" aria-hidden="true"></span>
+            <a href="<?= url('') ?>" class="logo-brand" style="display: inline-flex; align-items: center; gap: 0.65rem;">
+                <img src="<?= asset('assets/images/logo.jpg') ?>" alt="Logo <?= e($storeName) ?>" style="width: 44px; height: 44px; object-fit: contain; border-radius: 8px; border: 1.5px solid var(--color-ink); background: #ffffff; padding: 2px; box-shadow: 2px 2px 0 var(--color-ink);">
                 <span><?= e($storeName) ?></span>
             </a>
 
