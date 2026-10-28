@@ -13,7 +13,7 @@ require_once __DIR__ . '/../layouts/header.php';
     <div>
         <h1 style="font-size: 2.4rem; margin-bottom: 0.15rem;">Dasbor Pengelola Toko</h1>
         <p style="color: var(--color-ink-muted); margin: 0; font-size: 0.95rem;">
-            Halo, <strong><?= e($_SESSION['admin_name'] ?? 'Admin') ?></strong>! Kelola katalog dan pesanan masuk dari sini.
+            Halo, <strong><?= e($_SESSION['admin_name'] ?? 'Pengelola') ?></strong>! Kelola katalog dan pesanan masuk dari sini.
         </p>
     </div>
 

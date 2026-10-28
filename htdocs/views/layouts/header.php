@@ -47,7 +47,7 @@ $storeTagline = $settingModel->get('store_tagline', 'Koleksi pakaian preloved pi
                 </button>
 
                 <?php if (!empty($_SESSION['admin_logged_in'])): ?>
-                    <a href="<?= url('admin') ?>" class="btn-sketch btn-sketch-sm btn-sketch-sage">Panel Admin</a>
+                    <a href="<?= url('admin') ?>" class="btn-sketch btn-sketch-sm btn-sketch-sage">Ruang Pengelola</a>
                 <?php endif; ?>
             </div>
         </nav>

@@ -45,7 +45,7 @@ $shippingNote = $settingModel->get('shipping_note', 'Pengiriman dari Tangerang.'
                     <?php if (empty($_SESSION['admin_logged_in'])): ?>
                         <a href="<?= url('admin/login') ?>" style="color: var(--color-ink-light); text-decoration: underline;">Masuk Sebagai Pengelola Toko</a>
                     <?php else: ?>
-                        <a href="<?= url('admin') ?>" style="font-weight: 600; text-decoration: underline;">Buka Dasbor Admin</a>
+                        <a href="<?= url('admin') ?>" style="font-weight: 600; text-decoration: underline;">Buka Ruang Pengelola</a>
                     <?php endif; ?>
                 </p>
             </div>
